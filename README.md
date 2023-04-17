@@ -22,5 +22,5 @@ bla. bla
 
 # Contributions
 
-This project has had the following contribution to the litteratue:
+This project has led to the following contribution to the litteratue:
 - The work in progress paper ... for the conference *Reversible Computations 2023*.
