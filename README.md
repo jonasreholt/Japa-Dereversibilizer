@@ -20,6 +20,8 @@ dereversibilization and new opportunities of using reversible programs.
 ## Prerequisites
 - See `janus-like.cabal`.
 - An installation of z3 (https://github.com/Z3Prover/z3).
+  - Note that the version chosen must be compatible with the z3 bindings.
+    We have tested Z3 binding version 408.3 together with z3 version 4.8.12.
 - The haskell z3 bindings (https://hackage.haskell.org/package/z3).
 
 # Building executeable

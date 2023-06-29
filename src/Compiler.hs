@@ -2,7 +2,7 @@
 module Compiler where
 
 import System.IO (hPutStrLn, stderr)
-import Z3.Monad (evalZ3With, opt)
+import Z3.Monad (evalZ3)
 import Data.Bits
 import System.Timeout (timeout)
 import System.Exit
@@ -75,11 +75,12 @@ compiler args = do
   case ((fst args') .&. 1) == 0 of
     True -> do
       -- Optimize AST
-      res1 <- timeOut $ evalZ3With Nothing (opt "parallel.enable" True) $ processProgram astForward True
+      --res1 <- timeOut $ evalZ3With Nothing (opt "parallel.enable" True) $ processProgram astForward True
+      res1 <- timeOut $ evalZ3 $ processProgram astForward True
 
       case res1 of
         Just (oASTF, warningsF) -> do
-          res2 <- timeOut $ evalZ3With Nothing (opt "parallel.enable" True) $ processProgram astBackward False
+          res2 <- timeOut $ evalZ3 $ processProgram astBackward False
 
           case res2 of
             Just (oASTR, warningsR) -> do
