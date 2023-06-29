@@ -1,0 +1,63 @@
+Forward directional warnings:
+Warning: Loop invariant not true at maintenance (line 4, column 5)
+Reverse directional warnings:
+Warning: Loop invariant not true at initialization (line 4, column 5)
+
+#include <assert.h>
+#include <cstring>
+ 
+using namespace std;
+ 
+// Global variables defining starting state
+unsigned int x1 = 0;
+unsigned int x2 = 0;
+ 
+void foo_forward(unsigned int &x1, unsigned int &x2, const unsigned int n);
+void foo_reverse(unsigned int &x1, unsigned int &x2, const unsigned int n);
+ 
+ 
+void foo_forward(unsigned int &x1, unsigned int &x2, const unsigned int n)
+{
+    assert((x1) == (x2));
+    unsigned int i = 0;
+    while(i != n)
+    {
+        assert((x1) >= (x2));
+        x1 += i;
+        i += 1;
+        assert(!(i == 0));
+    }
+    unsigned int haps = x1;
+    
+    unsigned int fabs = n;
+    fabs += x2;
+    
+}
+ 
+void foo_reverse(unsigned int &x1, unsigned int &x2, const unsigned int n)
+{
+    unsigned int fabs = (x2) + (n);
+    fabs -= x2;
+    
+    unsigned int haps = x1;
+    
+    unsigned int i = n;
+    assert((x1) >= (x2));
+    while(i != 0)
+    {
+        assert((x1) >= (x2));
+        i -= 1;
+        x1 -= i;
+        assert(!(i == n));
+    }
+    assert((x1) == (x2));
+}
+ 
+int main()
+{
+    
+    
+    unsigned int a = 0;
+    
+    foo_forward(x1, x2, 4);
+}

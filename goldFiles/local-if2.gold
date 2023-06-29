@@ -1,0 +1,33 @@
+
+#include <assert.h>
+#include <cstring>
+ 
+using namespace std;
+ 
+ 
+ 
+int main()
+{
+    unsigned int b = 2;
+    b += 42;
+    
+    unsigned int a = 2;
+    if ((a) < (10))
+    {
+        unsigned int b = 2;
+        b += 42;
+        
+        a += 42;
+    }
+    else
+    {
+        unsigned int b = 2;
+        b += 42;
+        
+        a += 42;
+    }
+    
+    unsigned int b = 2;
+    b += 42;
+    
+}

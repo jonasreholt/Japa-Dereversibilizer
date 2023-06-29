@@ -1,0 +1,19 @@
+
+#include <assert.h>
+#include <cstring>
+ 
+using namespace std;
+ 
+// Global variables defining starting state
+unsigned int l = 2;
+unsigned int c = 2;
+ 
+ 
+int main()
+{
+    
+    
+    unsigned int a = 0;
+    a += ((2) - (c)) + (l);
+    
+}

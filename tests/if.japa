@@ -1,0 +1,8 @@
+procedure main()
+{
+    int a
+    if (a == 2)
+    {
+        a += 2
+    } fi (a == 4)
+}

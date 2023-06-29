@@ -1,0 +1,23 @@
+
+#include <assert.h>
+#include <cstring>
+ 
+using namespace std;
+ 
+// Global variables defining starting state
+unsigned int a = 1;
+ 
+ 
+int main()
+{
+    
+    unsigned int i = 0;
+    while(i != 10)
+    {
+        unsigned int tmp = a;
+        a += tmp;
+        
+        i += 1;
+        
+    }
+}

@@ -1,0 +1,27 @@
+
+#include <assert.h>
+#include <cstring>
+ 
+using namespace std;
+ 
+ 
+void f_forward(unsigned int &a);
+void f_reverse(unsigned int &a);
+ 
+ 
+void f_forward(unsigned int &a)
+{
+    a += 5;
+}
+ 
+void f_reverse(unsigned int &a)
+{
+    a -= 5;
+}
+ 
+int main()
+{
+    unsigned int b = 5;
+    f_forward(b);
+    
+}

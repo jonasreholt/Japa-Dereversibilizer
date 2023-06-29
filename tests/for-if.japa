@@ -1,0 +1,11 @@
+procedure main()
+{
+    int a
+    for local int i = 0
+    {
+        if (i % 2 == 0)
+        {
+            a += 2
+        } fi (i % 2 == 0)
+    } i += 1, until (dealloc int i = 5)
+}

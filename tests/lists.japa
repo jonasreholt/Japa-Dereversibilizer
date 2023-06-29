@@ -1,0 +1,35 @@
+procedure foo(int arr3[2][2]) {
+    local int arr0[2] = {1, 1}
+    dealloc int arr0[2] = {1, 1}
+
+    local int arr1[2][2] = {{1, 1}, {2, size(arr3[0])}}
+    dealloc int arr1[2][2] = {{1, 1}, {2, size(arr3[0])}}
+
+    local bool arr4[2] = {false, false}
+    //arr4[0] += true
+    dealloc bool arr4[2] = {false, true}
+
+    local int arr2[2][3] = {{1, 1, 1}, {2, 2, 2}}
+    arr2[1][2] += 1
+    dealloc int arr2[2][3] = {{1, 1, 1}, {2, 2, 3}}
+}
+
+procedure main() {
+    int arr0[1]
+
+    int arr1[2]
+
+    int arr2[2] = {1, 1}
+
+    int arr3[2][2]
+
+    int arr4[2][2] = {{1, 1}, {2, 2}}
+
+    int arr5[2][3] = {{1, 1, 1}, {1, 1, 1}}
+
+    int arr6[1][2][3] = {{{0, 0, 0}, {1, 1, 1}}}
+
+    int arr7[3][2][1] = {{{0}, {1}}, {{2}, {3}}, {{4}, {5}}}
+
+    call foo(arr3)
+}
