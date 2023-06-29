@@ -31,4 +31,5 @@ When all prerequisites are met, simply call `make build`.
 # Contributions
 
 This project has led to the following contribution to the litteratue:
-- The work in progress paper "..." for the conference *Reversible Computations 2023*.
+- The work in progress paper "Towards a Dereversibilizer: Fewer Asserts, Statically"
+  for the conference *Reversible Computations 2023*.
