@@ -1,7 +1,8 @@
 FILES=src/ web/ app/ bin/ goldFiles/ benchmarks/ tests/ Makefile janus-like.cabal CHANGELOG.md README.md
+JAPA_PATH=dist-newstyle/build/x86_64-linux/ghc-8.8.4/janus-like-0.1.0.0/x/japa/build/japa/japa
 
-all:
-	cabal build japa && cp dist-newstyle/build/x86_64-linux/ghc-8.10.7/janus-like-0.1.0.0/x/japa/build/japa/japa bin/japa && cp bin/japa web
+build:
+	cabal build japa && cp $(JAPA_PATH) bin/japa
 
 # This ignores the R^2 value
 bench:
@@ -16,3 +17,6 @@ test:
 
 pack:
 	mkdir project-src && cp -r $(FILES) project-src && zip -r project-src.zip project-src/ && rm -r project-src
+
+clean:
+	rm -rf dist-newstyle bin/japa

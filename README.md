@@ -17,10 +17,16 @@ the size of the assembly code and marks the first step towards automatic
 dereversibilization and new opportunities of using reversible programs.
 
 # How to run the code
+## Prerequisites
+- See `janus-like.cabal`.
+- An installation of z3 (https://github.com/Z3Prover/z3).
+- The haskell z3 bindings (https://hackage.haskell.org/package/z3).
 
-bla. bla
+# Building executeable
+When all prerequisites are met, simply call `make build`.
+
 
 # Contributions
 
 This project has led to the following contribution to the litteratue:
-- The work in progress paper ... for the conference *Reversible Computations 2023*.
+- The work in progress paper "..." for the conference *Reversible Computations 2023*.

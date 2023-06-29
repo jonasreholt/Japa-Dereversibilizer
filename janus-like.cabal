@@ -20,10 +20,9 @@ maintainer:         jsf130@alumni.ku.dk
 -- copyright:
 -- category:
 extra-source-files:
-    CHANGELOG.md
     README.md
 
-
+-- base ^>= 4.14.3.0
 library
     exposed-modules:    Compiler,
                         Syntax,
@@ -36,7 +35,7 @@ library
                         JapaToCpp,
                         RenameProcedure
     
-    build-depends:      base ^>=4.14.3.0,
+    build-depends:      base ^>=4.13.0.0,
                         parsec,
                         pretty,
                         containers,
@@ -52,7 +51,7 @@ executable japa
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.14.3.0,
+    build-depends:    base ^>=4.13.0.0,
                       janus-like
                      
     hs-source-dirs:   app
@@ -64,7 +63,7 @@ benchmark japa-benchmark
                        app
   main-is:             HaskellBenchmark.hs
 
-  build-depends:       base ^>=4.14.3.0,
+  build-depends:       base ^>=4.13.0.0,
                        z3,
                        criterion,
                        janus-like
