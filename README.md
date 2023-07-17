@@ -33,3 +33,9 @@ When all prerequisites are met, simply call `make build`.
 This project has led to the following contribution to the litteratue:
 - The work in progress paper "Towards a Dereversibilizer: Fewer Asserts, Statically"
   for the conference *Reversible Computations 2023*.
+    - Errata: Listing 1.8 should have said:
+      ```
+      (assert if-e)
+      ... ; if-body conversion
+      (assert (not fi-e)
+      ```
